@@ -1,5 +1,4 @@
 <?php
-    date_default_timezone_set('Asia/Bangkok');
     $accessToken = "nX8n4tgPFGhiiGDTvKoiYXZFFZJJqLTniXT0odUXfQh9UgCyiKcy+tq7uDvMYT6NQ8Kk9u0e0Vy3hDw39WURFR9SBaWRsbko0fP32TXn3yzycpVKpPLW8VhMm48hXdYJxV9G5B44bKmrYW5I7fJQWwdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
     
     $content = file_get_contents('php://input');

@@ -63,10 +63,6 @@
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ร้านอร ก๋วยเตี๋ยวเป็ด ส้มตำ ทองทวี";
         replyMsg($arrayHeader,$arrayPostData);
-        if($message == "ร้านอร"){
-            $arrayPostData['messages'][1]['type'] = "text";
-            $arrayPostData['messages'][1]['text'] = "เป็นความคิดที่ดี";   
-            replyMsg($arrayHeader,$arrayPostData);
         }          
     }
 function replyMsg($arrayHeader,$arrayPostData){

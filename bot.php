@@ -10,6 +10,7 @@
     
     //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
+    $message1 = $arrayJson['events'][0]['message']['text'];
     #ตัวอย่าง Message Type "Text"
        if($message == "สวัสดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -62,9 +63,15 @@
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ร้านอร ก๋วยเตี๋ยวเป็ด ส้มตำ ทองทวี";
         replyMsg($arrayHeader,$arrayPostData);
+        if($message1 == "ร้านอร"){
+            $arrayPostData['messages'][0]['type'] = "text";
+            $arrayPostData['messages'][0]['text'] = "เป็นความคิดที่ดี";   
+            replyMsg($arrayHeader,$arrayPostData);
+        }          
     }
 function replyMsg($arrayHeader,$arrayPostData){
-        $strUrl = "https://api.line.me/v2/bot/message/reply";
+        $strUrl = "https://api.line.me/v2/bot/
+        /reply";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,$strUrl);
         curl_setopt($ch, CURLOPT_HEADER, false);

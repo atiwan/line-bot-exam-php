@@ -58,7 +58,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
     else if($message == "กี่โมง"){
-        $timenow = date("H:i");
+        $timenow = time();
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "$timenow";

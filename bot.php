@@ -57,11 +57,10 @@
         $arrayPostData['messages'][1]['stickerId'] = "131";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "กี่โมง"){
-        $timenow = time();
+    else if($message == "ทานข้าวไหนดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "$timenow";
+        $arrayPostData['messages'][0]['text'] = "ร้านอร ก๋วยเตี๋ยวเป็ด ส้มตำ ทองทวี";
         replyMsg($arrayHeader,$arrayPostData);
     }
 function replyMsg($arrayHeader,$arrayPostData){
